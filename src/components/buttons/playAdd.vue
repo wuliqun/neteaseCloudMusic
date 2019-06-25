@@ -15,10 +15,14 @@
         .play{
             float: left;
             width: 62px;
-            width:31px;
+            line-height: 31px;
             text-indent: 25px;
+            text-align: center;
             color: #fff;
             background:url(../../assets/button2.png) no-repeat 0 -633px;
+            &:hover{
+                background-position:0 -719px;
+            }
         }
         .add{
             float: left;
@@ -26,6 +30,9 @@
             height: 31px;
             line-height: 31px;
             background: url(../../assets/button2.png) no-repeat 0 -1588px;
+            &:hover{
+                background-position:-40px -1588px;
+            }
         }
     }
 </style>

@@ -44,7 +44,6 @@ export default {
     beforeDestroy(){
     },
     computed:{
-        // ...mapGetters('userDiyPlaylist',['isAddDiyListPanelShowing','isCreateDiyListPanelShowing'])
     }
 }
 </script>

@@ -116,7 +116,7 @@
 				this.doRouter();
 			},
 			doRouter(){
-				if(this.activeIndex === undefined){
+				if(this.activeIndex == undefined){
 					this.$router.push({
 						name:'myMusicBlank'
 					});
@@ -125,6 +125,7 @@
 					if(this.createActive){
 						query = {name:this.userDiyPlaylist[this.activeIndex].name};
 					}else{
+						if(this.activeIndex < 0 || this.collectionList.length === 0) return;
 						query = {id:this.collectionList[this.activeIndex].id};
 					}
 					this.$router.push({name,query});
@@ -209,11 +210,11 @@
 			}else if(query.name){ //带了参数进来，设置当前激活项
 				let name = query.name;
 				this.createActive = true;
-				this.activeIndex = this.userDiyPlaylistNameArr.indexOf(name.toString());
+				this.activeIndex = this.userDiyPlaylistNameArr.indexOf(name);
 			}else{
 				let id = query.id;
 				this.createActive = false;
-				this.activeIndex = this.collectionListIdArr.indexOf(id.toString());
+				this.activeIndex = this.collectionListIdArr.indexOf(Number(id));
 			}
 
 			this.doRouter();
