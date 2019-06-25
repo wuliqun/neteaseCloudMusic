@@ -1,6 +1,6 @@
 <template>
-    <div class="collect-btn clearfix">
-        <a @click="$emit('click')" class="collect" :class="{disabled:disabled}">
+    <div class="share-btn clearfix">
+        <a @click="$emit('click')" class="share" :class="{disabled:disabled}">
             <slot></slot>
         </a>
     </div>
@@ -12,20 +12,20 @@
                 type:Boolean,
                 default:false
             }
-        }
+        } 
     }
 </script>
 
 <style lang="scss" scoped>
-    .collect-btn{
-        .collect{
+    .share-btn{
+        .share{
             position:relative;
             float: left;
             height:31px;
             line-height:31px;
             padding:0 7px 0 28px;
             color:#333;            
-            background:url(../../assets/button2.png) no-repeat 0 -977px;
+            background:url(../../assets/button2.png) no-repeat 0 -1225px;
             &:after{
                 content:'';
                 position:absolute;
@@ -36,13 +36,13 @@
                 background:url(../../assets/button2.png) no-repeat -245px -1020px;
             }
             &:hover{
-                background-position:0 -1063px;
+                background-position:0 -1268px;
             }
             &:hover:after{
                 background-position:-245px -1106px;
             }
             &.disabled{
-                background-position:0 -1149px;
+                background-position:0 -1311px;
             }
             &.disabled:after{
                 background-position:-245px -1192px;
@@ -50,4 +50,3 @@
         }
     }    
 </style>
-

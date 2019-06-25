@@ -49,7 +49,7 @@
 					</template>
 				</div>
 				<div class="col col-5 f-thide">
-					<router-link :to="{name:album,query:{id:track.al.id}}">
+					<router-link :to="{name:'album',query:{id:track.al.id}}">
 						{{track.al.name}}
 					</router-link>
 				</div>

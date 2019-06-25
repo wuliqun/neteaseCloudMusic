@@ -24,12 +24,36 @@
 				</div>
 			</div>
 			<div class="operate clearfix">
-				<a class="play" :class="{disabled:playlist.tracks.length == 0}" @click="playAll">播放</a>
-				<a class="add" :class="{disabled:playlist.tracks.length == 0}" @click="addToList"></a>
-				<a class="collect icon-1" :class="{disabled:playlist.tracks.length == 0}">({{playlist.subscribedCount}})</a>
-				<a class="share icon-1" :class="{disabled:playlist.tracks.length == 0}">({{playlist.shareCount}})</a>
-				<a class="download icon-1" :class="{disabled:playlist.tracks.length == 0}">下载</a>
-				<a class="comment icon-1" :class="{disabled:playlist.tracks.length == 0}">({{playlist.commentCount}})</a>
+				<div class="btn-wrapper">
+					<play-add-button
+						@play="playAll"
+						@add="addToList">						
+					</play-add-button>
+				</div>
+				<div class="btn-wrapper">
+					<collect-button 
+						:disabled="playlist.tracks.length === 0">
+						({{playlist.subscribedCount}})
+					</collect-button>
+				</div>
+				<div class="btn-wrapper">
+					<share-button 
+						:disabled="playlist.tracks.length === 0">
+						({{playlist.shareCount}})
+					</share-button>
+				</div>
+				<div class="btn-wrapper">
+					<download-button 
+						:disabled="playlist.tracks.length === 0">
+						下载
+					</download-button>
+				</div>
+				<div class="btn-wrapper">
+					<comment-button
+						:disabled="playlist.tracks.length === 0">
+						({{ playlist.commentCount }})
+					</comment-button>
+				</div>
 			</div>
 			<div class="tags clearfix">
 				<span>标签：</span>
@@ -44,6 +68,13 @@
 </template>
 <script>
 	import TxtPanel from './txtPanel'
+	import {
+			CollectButton,
+			CommentButton,
+			PlayAddButton,
+			DownloadButton,
+			ShareButton
+		}from '@components/buttons'
 	import {mapMutations,mapActions} from 'vuex'
 	export default{
 		data(){
@@ -77,7 +108,12 @@
 		},
 		props:['playlist'],
 		components:{
-			TxtPanel
+			TxtPanel,
+			CollectButton,
+			CommentButton,
+			PlayAddButton,
+			DownloadButton,
+			ShareButton
 		}
 	}
 </script>
@@ -142,89 +178,9 @@
 		height:31px;
 		margin-bottom:25px;
 	}
-	#playlist-header .operate a{
-		float:left;
-		height:31px;
-		margin-right:5px;
-		line-height:31px;
-		text-align:center;
-		background:url(../../assets/button2.png) no-repeat 0 0;
-	}
-	#playlist-header .operate .icon-1{
-		position:relative;
-		color:#333;
-		padding:0 7px 0 28px;
-	}
-	#playlist-header .operate .icon-1:after{
-		content:'';
-		position:absolute;
-		width:5px;
-		height:100%;
-		right:0;
-		top:0;
-		background:url(../../assets/button2.png) no-repeat -245px -1020px;
-	}
-	#playlist-header .operate .icon-1:hover:after{
-		background:url(../../assets/button2.png) no-repeat -245px -1106px;
-	}
-	#playlist-header .operate .icon-1.disabled:after{
-		background:url(../../assets/button2.png) no-repeat -245px -1192px;
-	}
-	#playlist-header .operate .play{
-		width:62px;
-		margin-right:0;
-		text-indent:25px;
-		color:#fff;
-		background-position:0 -633px;
-	}
-	#playlist-header .operate .play:hover{
-		background-position:0 -719px;
-	}
-	#playlist-header .operate .add{
-		width:31px;
-		background-position:0 -1588px;
-	}
-	#playlist-header .operate .add:hover{
-		background-position:-40px -1588px;
-	}
-	#playlist-header .operate .add:hover{
-		background-position:-40px -1588px;
-	}
-	#playlist-header .operate .collect{
-		background-position:0 -977px;
-	}
-	#playlist-header .operate .collect:hover{
-		background-position:0 -1063px;
-	}
-	#playlist-header .operate .collect.disabled{
-		background-position:0 -1149px;
-	}
-	#playlist-header .operate .share{
-		background-position:0 -1225px;
-	}
-	#playlist-header .operate .share:hover{
-		background-position:0 -1268px;
-	}
-	#playlist-header .operate .share.disabled{
-		background-position:0 -1311px;
-	}
-	#playlist-header .operate .download{
-		background-position:0 -2761px;
-	}
-	#playlist-header .operate .download:hover{
-		background-position:0 -2805px;
-	}
-	#playlist-header .operate .download.disabled{
-		background-position:0 -3024px;
-	}
-	#playlist-header .operate .comment{
-		background-position:0 -1465px;
-	}
-	#playlist-header .operate .comment:hover{
-		background-position:0 -1508px;
-	}
-	#playlist-header .operate .comment.disabled{
-		background-position:0 -1551px;
+	#playlist-header .operate .btn-wrapper{
+		float: left;
+		margin-right: 5px;
 	}
 	#playlist-header .tags{
 		height:22px;

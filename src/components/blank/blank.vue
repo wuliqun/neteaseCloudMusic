@@ -5,7 +5,7 @@
 				<img src="../../assets/blank.png" alt="">
 			</div>
 			<div class="txt">
-				<p>还没有创建或收藏歌单哦~~，去<router-link :to="{name:index}">发现音乐</router-link></p>
+				<p>还没有创建或收藏歌单哦~~，去<router-link :to="{name:'index'}">发现音乐</router-link></p>
 			</div>
 		</div>
 	</div>	
