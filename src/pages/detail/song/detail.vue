@@ -1,10 +1,10 @@
 <template>
     <div class="song-detail detail-content">
         <div class="detail-wrapper clearfix">
-            <div class="left">
+            <div class="left" v-if="song">
                 <div class="head clearfix">
                     <div class="img">
-                        <img src="" alt="">
+                        <img :src="song.al.picUrl" alt="">
                     </div>    
                 </div>    
             </div>
