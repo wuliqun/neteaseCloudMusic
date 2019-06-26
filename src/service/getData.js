@@ -130,3 +130,6 @@ export const getAlbums = ({limit=30,offset=0})=>{
 export const getSongDetailInfo = ({id})=>{
 	return axios.get('/song/detail?ids=' + id);
 }
+export const getSongLyric = (id)=>{
+	return axios.get('/lyric?id=' + id)
+}

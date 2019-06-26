@@ -82,7 +82,7 @@
 <script>
     import siteStructure from '@/config/siteStructure'    
     import HeaderSearch from '@components/headerSearch'
-
+    const detailRouterName = ['mv','song','dj','album','playlist','userHome','artist','search','program']
     export default {
         data(){
             return {
@@ -94,10 +94,12 @@
         },
         computed:{
             isDiscover(){
-                return this.$route.path.includes('/discover') || this.$route.path =='/';
+                var name = this.$route.name;                
+                return /discover/.test(name) || detailRouterName.indexOf(name) !== -1;
             },
             isRecomend(){
-                return this.$route.path === '/discover' || this.$route.path ==='/';
+                var name = this.$route.name;
+                return name === 'discoverRecommend' || name === 'index';
             }
         },
         methods:{
