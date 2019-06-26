@@ -16,7 +16,6 @@
 </template>
 <script>
     import tabInfo from './searchTabData'
-    console.log(tabInfo)
     export default {
         data(){
             return {
@@ -43,6 +42,7 @@
 </script>
 <style lang="scss" scoped>
     .search-tab{
+        margin-bottom: 20px;
         border:solid #ccc;
         border-width:0 1px;
         .tab-item{
@@ -54,9 +54,11 @@
             color:#333;
             text-align: center;
             transition:all .5s;
+            background-color: #f7f7f7;
             &.active{
                 border-top-color:#d13030;
                 border-bottom-color:transparent;
+                background-color: #fff;
                 .tab-link{
                     border-color:transparent #ccc;
                 }
@@ -73,6 +75,7 @@
             }
             &:hover{
                 border-top-color:#d13030;
+                background-color: #fff;
             }            
         }
         .tab-link{

@@ -16,37 +16,118 @@
                 </div>
             </div>
             <div class="content">
-                <div class="info-desc" v-if="lastKeyword">搜索“{{ lastKeyword }}”,共找到<span class="red">{{ count }}</span>{{ type | type2str }}</div>
+                <div class="info-desc" v-if="listData">搜索“{{ lastKeyword }}”,共找到<span class="red">{{ count }}</span>{{ type | type2str }}</div>
                 <search-tab
                     @changetype="changeType"
                     :type="type">
                 </search-tab>
+                <div class="result-wrapper" v-if="listData">
+                    <component :is="currentComponent" :list="listData" :keyword="lastKeyword"></component>
+                </div>
+                <div class="loading-wrapper" v-else>
+                    <loading show></loading>
+                </div>
+            </div>
+            <div class="pagination-wrapper">
+                <pagination
+                    v-if="count > 30"
+                    :total="count"
+                    :current-index="pageIndex + 1"
+                    :index-count="8"
+                    :count-per-page="30"
+                    @page="getDataByPageIndex">
+                </pagination>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-    import SearchTab from './components/searchTab'
+    import {
+        SearchTab,
+        SongList,
+        ArtistList,
+        AlbumList
+    } from './components'
+    import Loading from '@components/loading'
+    import {searchByType} from '@service/getData'
+    import Pagination from '@components/pagination'
     export default {
         data(){
             return {
                 lastKeyword:'',
                 keyword:'',
-                type:1000,
-                count:600
+                type:1,
+                pageIndex:0,
+                listData:null,
+                count:0
             }
         },
         created(){
-            this.initData();
+            this.initQuery();
+            this.getData();
         },
         methods:{
-            initData(){
+            initQuery(){
                 this.keyword = this.lastKeyword = this.$route.query.s;
                 this.type = Number(this.$route.query.type) || 1;
             },
             changeType(type){
+                if(this.type == type) return;
                 this.type = type;
+                this.$router.push({
+                    name:'search',
+                    query:{
+                        type,
+                        s:this.lastKeyword
+                    }
+                });
+                this.pageIndex = 0;
+                this.count = 0;
+                this.listData = null;
+                this.getData();
+            },
+            getData(){
+                var type = this.type;
+                searchByType({
+                    keywords:this.lastKeyword,
+                    type,
+                    offset:this.pageIndex * 30
+                }).then(res=>{
+                    switch(type){
+                        case 1:
+                            this.listData = res.data.result.songs;
+                            this.count = res.data.result.songCount;
+                            break;
+                        case 100:
+                            this.listData = res.data.result.artists;
+                            this.count = res.data.result.artistCount;
+                            break;
+                        case 10:
+                            this.listData = res.data.result.albums;
+                            this.count = res.data.result.albumCount;
+                            break;
+                        default:
+                            break;
+                    }
+                });
+            },
+            getDataByPageIndex(index){
+                this.listData = null;
+                this.pageIndex = index - 1;
+                this.getData();
+            }
+        },
+        computed:{
+            currentComponent(){
+                switch(this.type){
+                    case 1:
+                        return 'SongList';
+                    case 100:
+                        return 'ArtistList';
+                    case 10:
+                        return 'AlbumList'
+                }
             }
         },
         filters:{
@@ -73,7 +154,12 @@
             }
         },
         components:{
-            SearchTab
+            SearchTab,
+            Loading,
+            SongList,
+            ArtistList,
+            Pagination,
+            AlbumList
         }
     }
 </script>
@@ -118,10 +204,15 @@
                 color:#c20c0c;
             }
         }
+        .loading-wrapper{
+            height:300px;
+            padding-top:20px;
+        }
     }
     .wrapper{
         width:982px;
         margin:0 auto;
+        padding-bottom: 1px;
         border:solid #d3d3d3;
         border-width:0 1px;
         background-color: #fff;

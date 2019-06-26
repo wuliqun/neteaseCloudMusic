@@ -82,7 +82,7 @@
 <script>
     import siteStructure from '@/config/siteStructure'    
     import HeaderSearch from '@components/headerSearch'
-    const detailRouterName = ['mv','song','dj','album','playlist','userHome','artist','search','program']
+    const detailRouterName = ['mv','song','dj','album','playlist','userHome','artist','program']
     export default {
         data(){
             return {

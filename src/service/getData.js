@@ -17,7 +17,16 @@ export const getImageMainColor = (url)=>{
 export const search = (keyword)=>{
 	return axios.get('/search/suggest?keywords=' + keyword);
 }
-
+export const searchByType = ({keywords,type=1,limit=30,offset=0})=>{
+	return axios.get('/search',{
+		params:{
+			keywords,
+			type,
+			limit,
+			offset
+		}
+	});
+}
 // 获取热门推荐数据
 export const getHotRecommend = ()=>{
 	return axios.get('/personalized');

@@ -47,6 +47,7 @@ body{
 .detail-content .detail-wrapper{
 	width:982px;
 	margin:0 auto;
+	padding-bottom: 1px;
 	box-sizing: border-box;
 	border:solid #d3d3d3;
 	border-width:0 1px;
