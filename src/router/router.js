@@ -63,13 +63,7 @@ export default {
             component:DiscoverPlaylist
         },
         {
-            path:'/discover',
-            name:'discoverRecommend',
-            component:Recommend
-        },
-        {
             path:'/discover/djradio',
-            name:'discoverDjRadio',
             component:DjRadio,
             children:[
                 {
@@ -96,7 +90,6 @@ export default {
         },
         {
             path:'/discover/artist',
-            name:'discoverSinger',
             component:DiscoverArtist,
             children:[
                 {
