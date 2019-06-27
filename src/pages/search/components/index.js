@@ -2,10 +2,16 @@ import SearchTab from './searchTab'
 import SongList from './songList'
 import ArtistList from './artistList'
 import AlbumList from './AlbumList'
+import MvList from './MvList'
+import LyricList from './LyricList'
+import PlaylistList from './PlaylistList'
 
 export {
     SearchTab,
     SongList,
     ArtistList,
-    AlbumList
+    AlbumList,
+    MvList,
+    LyricList,
+    PlaylistList
 }

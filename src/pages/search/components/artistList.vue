@@ -49,6 +49,7 @@
             .ar{
                 float: left;
                 color:#333;
+                width:110px;
                 &:hover{
                     text-decoration: underline;
                 }

@@ -47,7 +47,10 @@
         SearchTab,
         SongList,
         ArtistList,
-        AlbumList
+        AlbumList,
+        MvList,
+        LyricList,
+        PlaylistList
     } from './components'
     import Loading from '@components/loading'
     import {searchByType} from '@service/getData'
@@ -96,6 +99,7 @@
                 }).then(res=>{
                     switch(type){
                         case 1:
+                        case 1006:
                             this.listData = res.data.result.songs;
                             this.count = res.data.result.songCount;
                             break;
@@ -106,6 +110,14 @@
                         case 10:
                             this.listData = res.data.result.albums;
                             this.count = res.data.result.albumCount;
+                            break;
+                        case 1014:
+                            this.listData = res.data.result.videos;
+                            this.count = res.data.result.videoCount;
+                            break;
+                        case 1000:
+                            this.listData = res.data.result.playlists;
+                            this.count = res.data.result.playlistCount;
                             break;
                         default:
                             break;
@@ -127,6 +139,12 @@
                         return 'ArtistList';
                     case 10:
                         return 'AlbumList'
+                    case 1014:
+                        return 'MvList'
+                    case 1006:
+                        return 'LyricList'
+                    case 1000:
+                        return 'PlaylistList'
                 }
             }
         },
@@ -159,7 +177,10 @@
             SongList,
             ArtistList,
             Pagination,
-            AlbumList
+            AlbumList,
+            MvList,
+            LyricList,
+            PlaylistList
         }
     }
 </script>

@@ -33,6 +33,9 @@ const Playlist = () => import('@pages/detail/playlist')
 const UserHome = () => import('@pages/detail/userHome')
 const Dj = () => import('@pages/detail/dj')
 const Program = () => import('@pages/detail/program')
+const Video = () => import('@pages/detail/video')
+
+
 
 export default {
     mode : 'hash',
@@ -156,6 +159,11 @@ export default {
             component:Mv
         },
         {
+            path:'/video',
+            name:'video',
+            component:Video
+        },
+        {
             path:'/song',
             name:'song',
             component:Song
@@ -183,6 +191,7 @@ export default {
         {
             path:'/dj',
             name:'dj',
+            alias:['djRadio'],
             component:Dj
         },
         {

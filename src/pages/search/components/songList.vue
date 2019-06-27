@@ -7,10 +7,10 @@
             <div class="col col-0 clearfix">
                 <a class="icon play" title="播放" @click="play(index)" :class="{playing:track.id == playingId}"></a>
             </div>
-            <div class="col col-1">
+            <div class="col col-1 f-thide">
                 <router-link 
                     :to="{name:'song',query:{id:track.id}}" 
-                    class="name f-thide" 
+                    class="name" 
                     v-html="wrapKeywords(track.name)">                    
                 </router-link>
                 <router-link :to="{name:'mv',query:{id:track.mv}}" class="mv-icon" v-if="track.mv" title="播放MV">
@@ -45,7 +45,7 @@
     </div>
 </template>
 <script>
-    import {mapState,mapMutations} from 'vuex'
+    import {mapState,mapMutations,mapActions} from 'vuex'
     import searchMixin from './searchMixin'
     export default {
         mixins:[searchMixin],
@@ -54,17 +54,18 @@
 		},
 		methods:{
             ...mapMutations('userDiyPlaylist',['setSongWaitToAdd','showAddDiyListPanel']),
-            ...mapMutations('playlist',['pushIntoPlaylist','insertIntoPlaylist']),
+            ...mapActions('playlist',['pushSongIntoPlaylistById','insertSongIntoPlaylistById']),
 			addSong(index){
 				this.setSongWaitToAdd(this.list[index]);
 				this.showAddDiyListPanel();
 			},
-			play(index){
-				this.insertIntoPlaylist(this.list[index]);
+			async play(index){
+                console.log(this.list[index].id);
+				await this.insertSongIntoPlaylistById(this.list[index].id);
 				this.$message.playerMessage('已开始播放');
 			},
-			addToList(index){
-				this.pushIntoPlaylist(this.list[index]);
+			async addToList(index){                
+				await this.pushSongIntoPlaylistById(this.list[index].id);
 				this.$message.playerMessage('已添加至播放列表');
             }
         },
@@ -109,6 +110,7 @@
             }
             .col-1{
                 width:364px;
+                padding-right:0;
             }
         }
         a{
@@ -150,6 +152,8 @@
         }
         .col-1{
             width:470px;
+            padding-right:20px;
+            box-sizing: border-box;
         }
         .col-2{
             display:none;

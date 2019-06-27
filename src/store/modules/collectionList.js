@@ -1,10 +1,10 @@
 import {
     getStore,
-    setStore
+    setStore    
 } from '@service/storageApi'
 
 import {
-	getNewAlbums,
+	getPlaylistDetail
 } from '@service/getData'
 
 const state = {
@@ -49,7 +49,12 @@ const actions = {
     initCollectionList:({commit,state})=>{
         var collectionList = getStore('collectionList') || []
         commit('setCollectionList',collectionList);
-    }    
+    },
+    addCollectById:({commit,state},id) =>{
+        getPlaylistDetail(id).then(res=>{
+            commit('addCollect',res.data.playlist);
+        })
+    }  
 }
 
 export default {

@@ -3,7 +3,16 @@
 		<form action="">
 			<div class="input-wrap">
 				<i class="topbar-icon search-icon"></i>
-				<input type="text" name="keyword" v-model="keyword" placeholder="音乐/视频/电台/用户" autocomplete="off" @focus="focus" @blur="blur" @input="getSearchTip" @keydown.enter="search">
+				<input 
+					type="text" 
+					name="keyword" 
+					v-model="keyword" 
+					placeholder="音乐/视频/电台/用户" 
+					autocomplete="off" 
+					@focus="focus" 
+					@blur="blur" 
+					@input="getSearchTip" 
+					@keydown.enter="search">
 			</div>
 			<div class="tip" v-if="searchTip">
 				<div class="search-user">
@@ -64,10 +73,18 @@
 					return '<em>' + keyword + '</em>';
 				});
 			},
-			search(){
+			search(e){
+				e.stopPropagation();
 				// 搜索框回车
-				// TODO:  需要制作搜索页面
-				let keyword = this.keyword.trim();				
+				let keyword = this.keyword.trim();
+				if(keyword){
+					this.$router.push({
+						name:'search',
+						query:{
+							s:keyword
+						}
+					});
+				}		
 			}
 		},
 		computed:{

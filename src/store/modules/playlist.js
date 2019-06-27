@@ -4,7 +4,8 @@ import {
 } from '@service/storageApi'
 import {
     getPlaylistDetail,
-    getAlbumDetail
+    getAlbumDetail,
+    getSongDetailInfo
 } from '@service/getData'
 
 const state = {
@@ -107,6 +108,21 @@ const actions = {
         getPlaylistDetail(id).then(response=>{
 			commit('insertIntoPlaylist',response.data.playlist.tracks);
 		});
+    },
+    pushListIntoPlaylistById:({commit,state},id)=>{
+        getPlaylistDetail(id).then(response=>{
+			commit('pushIntoPlaylist',response.data.playlist.tracks);
+		});
+    },
+    insertSongIntoPlaylistById:({commit,state},id)=>{
+        getSongDetailInfo({id}).then(res=>{
+            commit('insertIntoPlaylist',res.data.songs[0]);
+        })
+    },
+    pushSongIntoPlaylistById:({commit,state},id)=>{
+        getSongDetailInfo({id}).then(res=>{
+            commit('pushIntoPlaylist',res.data.songs[0]);
+        })
     },
     insertListIntoPlaylistByAlbumId:({commit,state},id)=>{
         getAlbumDetail(id).then(response=>{
