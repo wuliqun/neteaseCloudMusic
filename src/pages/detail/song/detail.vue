@@ -40,10 +40,19 @@
             initData(){
                 getSongDetailInfo({id:this.id}).then(res=>{
                     this.song = res.data.songs[0];
-                    console.log(JSON.stringify(res.data.songs[0]));
                 })
             }
-        },        
+        },
+        watch:{
+            $route(to){
+                if(to.name === 'song'){
+                    if(to.query.id !== this.id){
+                        this.id = to.query.id;
+                        this.initData();
+                    }
+                }
+            }
+        },
         created(){
             this.id = this.$route.query.id;
             if(!this.id){

@@ -11,12 +11,15 @@
                         class="input">
                     <button 
                         class="submit"
+                        @click="search"
                         title="搜索">                        
                     </button>
                 </div>
             </div>
             <div class="content">
-                <div class="info-desc" v-if="listData">搜索“{{ lastKeyword }}”,共找到<span class="red">{{ count }}</span>{{ type | type2str }}</div>
+                <div class="info-desc">
+                    <div v-if="listData">搜索“{{ lastKeyword }}”,共找到<span class="red">{{ count }}</span>{{ type | type2str }}</div>
+                </div>
                 <search-tab
                     @changetype="changeType"
                     :type="type">
@@ -50,7 +53,9 @@
         AlbumList,
         MvList,
         LyricList,
-        PlaylistList
+        PlaylistList,
+        DjRadiosList,
+        UserList
     } from './components'
     import Loading from '@components/loading'
     import {searchByType} from '@service/getData'
@@ -69,6 +74,16 @@
         created(){
             this.initQuery();
             this.getData();
+        },
+        watch:{
+            '$route.query.s'(val){
+                if(this.lastKeyword !== val){
+                    this.listData = null;
+                    this.count = 0;
+                    this.initQuery();
+                    this.getData();
+                }
+            }
         },
         methods:{
             initQuery(){
@@ -89,6 +104,17 @@
                 this.count = 0;
                 this.listData = null;
                 this.getData();
+            },
+            search(){
+                if(this.keyword !== this.lastKeyword){
+                    this.$router.push({
+                        name:'search',
+                        query:{
+                            s:this.keyword,
+                            type:this.type
+                        }
+                    })
+                }
             },
             getData(){
                 var type = this.type;
@@ -119,6 +145,14 @@
                             this.listData = res.data.result.playlists;
                             this.count = res.data.result.playlistCount;
                             break;
+                        case 1009:
+                            this.listData = res.data.result.djRadios;
+                            this.count = res.data.result.djRadiosCount;
+                            break;
+                        case 1002:
+                            this.listData = res.data.result.userprofiles;
+                            this.count = res.data.result.userprofileCount;
+                            break;
                         default:
                             break;
                     }
@@ -145,6 +179,10 @@
                         return 'LyricList'
                     case 1000:
                         return 'PlaylistList'
+                    case 1009:
+                        return 'DjRadiosList'
+                    case 1002:
+                        return 'UserList'
                 }
             }
         },
@@ -180,7 +218,9 @@
             AlbumList,
             MvList,
             LyricList,
-            PlaylistList
+            PlaylistList,
+            DjRadiosList,
+            UserList
         }
     }
 </script>
@@ -217,6 +257,8 @@
         }
         .info-desc{
             margin-bottom: 15px;
+            line-height: 18px;
+            height:18px;
         }
         .content{
             padding:0 40px;

@@ -8,7 +8,8 @@
 					name="keyword" 
 					v-model="keyword" 
 					placeholder="音乐/视频/电台/用户" 
-					autocomplete="off" 
+					autocomplete="off"
+					ref="keyinput"
 					@focus="focus" 
 					@blur="blur" 
 					@input="getSearchTip" 
@@ -25,8 +26,13 @@
 							<span class="txt">{{key | key2name}}</span>
 						</div>
 						<ul class="right">
-							<li v-for="item in searchResult[key]" :key="item.name">
-								<a v-html="nameFilter(item.name,keyword)" class="item-link f-thide" :title="item.name"></a>
+							<li v-for="item in searchResult[key]" :key="item.id">
+								<router-link 
+									v-html="nameFilter(item.name,keyword)"
+									:to="{name:key.slice(0,key.length-1),query:{id:item.id}}"
+									class="item-link f-thide"
+									:title="item.name">
+								</router-link>
 							</li>
 						</ul>
 					</div>						
@@ -66,7 +72,9 @@
 				this.showTip = true;
 			},
 			blur(){
-				this.showTip = false;
+				setTimeout(()=>{
+					this.showTip = false;
+				},300);
 			},
 			nameFilter(name,keyword){
 				return name.replace(keyword,keyword=>{
@@ -74,7 +82,8 @@
 				});
 			},
 			search(e){
-				e.stopPropagation();
+				e.preventDefault();
+				this.$refs.keyinput.blur();
 				// 搜索框回车
 				let keyword = this.keyword.trim();
 				if(keyword){

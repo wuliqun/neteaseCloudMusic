@@ -7,21 +7,21 @@
 			<ul class="comments">
 				<li v-for="comment in commentData.hotComments" class="comment-item clearfix" :key="comment.id">
 					<div class="img">
-						<router-link :to="{name:'userHome',query:{id:comment.user.id}}">
+						<router-link :to="{name:'userHome',query:{id:comment.user.userId}}">
 							<img :src="comment.user.avatarUrl" alt="">
 						</router-link>
 					</div>
 					<div class="comment-wraper">
 						<div class="comment-content">
 							<p class="comment-txt">
-								<router-link :to="{name:'userHome',query:{id:comment.user.id}}" class="name">
+								<router-link :to="{name:'userHome',query:{id:comment.user.userId}}" class="name">
 									{{comment.user.nickname}}
 								</router-link>:
 								<span>{{comment.content}}</span>
 							</p>
 							<div class="reply-comment" v-if="comment.beReplied.length > 0">
 								<p class="comment-txt" v-for="reply in comment.beReplied" :key="reply.id">
-									<router-link :to="{name:'userHome',query:{id:reply.user.id}}" class="name">
+									<router-link :to="{name:'userHome',query:{id:reply.user.userId}}" class="name">
 										{{reply.user.nickname}}
 									</router-link>:
 									<span>{{reply.content}}</span>
@@ -44,27 +44,27 @@
 			</ul>
 		</div>
 		<div class="new-comments">
-			<div class="header">
+			<div class="header" v-if="commentData.comments && commentData.comments.length > 0">
 				<h3>最新评论({{commentData.total}})</h3>
 			</div>
 			<ul class="comments">
 				<li v-for="comment in commentData.comments" class="comment-item clearfix" :key="comment.id">
 					<div class="img">
-						<router-link :to="{name:'userHome',query:{id:comment.user.id}}">
+						<router-link :to="{name:'userHome',query:{id:comment.user.userId}}">
 							<img :src="comment.user.avatarUrl" alt="">
 						</router-link>
 					</div>
 					<div class="comment-wraper">
 						<div class="comment-content">
 							<p class="comment-txt">
-								<router-link :to="{name:'userHome',query:{id:comment.user.id}}" class="name">
+								<router-link :to="{name:'userHome',query:{id:comment.user.userId}}" class="name">
 									{{comment.user.nickname}}
 								</router-link>:
 								<span>{{comment.content}}</span>
 							</p>
 							<div class="reply-comment" v-if="comment.beReplied.length > 0">
 								<p class="comment-txt" v-for="reply in comment.beReplied" :key="reply.id">
-									<router-link :to="{name:'userHome',query:{id:reply.user.id}}" class="name">
+									<router-link :to="{name:'userHome',query:{id:reply.user.userId}}" class="name">
 										{{reply.user.nickname}}
 									</router-link>:
 									<span>{{reply.content}}</span>

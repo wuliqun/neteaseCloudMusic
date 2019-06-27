@@ -5,6 +5,8 @@ import AlbumList from './AlbumList'
 import MvList from './MvList'
 import LyricList from './LyricList'
 import PlaylistList from './PlaylistList'
+import DjRadiosList from './DjRadiosList'
+import UserList from './UserList'
 
 export {
     SearchTab,
@@ -13,5 +15,7 @@ export {
     AlbumList,
     MvList,
     LyricList,
-    PlaylistList
+    PlaylistList,
+    DjRadiosList,
+    UserList
 }

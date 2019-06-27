@@ -153,12 +153,12 @@ export default {
             name:'download',
             component:Download
         },
-        { // down all TODO:
+        { // TODO:
             path:'/mv',
             name:'mv',
             component:Mv
         },
-        {
+        {  // TODO:
             path:'/video',
             name:'video',
             component:Video
@@ -168,33 +168,33 @@ export default {
             name:'song',
             component:Song
         },
-        {
+        {  // TODO:
             path:'/album',
             name:'album',
             component:Album
         },
-        {
+        {  // TODO:
             path:'/artist',
             name:'artist',
             component:Artist
         },
-        {
+        {  // TODO:
             path:'/playlist',
             name:'playlist',
             component:Playlist
         },
-        {
+        {   // TODO:
             path:'/user/home',
             name:'userHome',
             component:UserHome
         },
-        {
+        {  // TODO:
             path:'/dj',
             name:'dj',
             alias:['djRadio'],
             component:Dj
         },
-        {
+        {  // TODO:
             path:'/program',
             name:'program',
             component:Program

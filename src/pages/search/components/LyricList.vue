@@ -75,7 +75,6 @@
 				this.showAddDiyListPanel();
 			},
 			async play(index){
-                console.log(this.list[index].id);
 				await this.insertSongIntoPlaylistById(this.list[index].id);
 				this.$message.playerMessage('已开始播放');
 			},
@@ -91,6 +90,32 @@
                 }
             }
         },
+        filters:{
+			time2str(duration){
+				duration = Math.round(duration/1000);
+				let secs = duration % 60;
+				duration = parseInt(duration/60);
+				let minutes = duration % 60;
+				let hours = parseInt(duration/60);
+				var s = '';
+				if(hours > 0){
+					s += hours > 9? hours: '0' + hours;
+					s += ':';
+				}
+				s += minutes > 9? minutes: '0' + minutes;
+				s += ':';
+				s += secs > 9? secs: '0' + secs;
+				return s;
+			},
+			joinName(artists){
+				return artists.map(artist=>{
+					return artist.name;
+				}).join('/');
+			}
+        },
+        computed:{
+            ...mapState('playlist',['playingId'])
+        }
     }
 </script>
 
