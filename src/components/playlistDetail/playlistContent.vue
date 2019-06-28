@@ -109,7 +109,13 @@
 				}).join('/');
 			}
 		},
-		props:['playlist','isCreated']
+		props:{
+			playlist:Object,
+			isCreated:{
+				type:Boolean,
+				default:false
+			}
+		}
 	}
 </script>
 

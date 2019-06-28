@@ -171,7 +171,7 @@ export default {
             name:'artist',
             component:Artist
         },
-        {  // TODO:
+        {
             path:'/playlist',
             name:'playlist',
             component:Playlist

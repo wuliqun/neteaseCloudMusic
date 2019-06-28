@@ -142,3 +142,21 @@ export const getSongDetailInfo = ({id})=>{
 export const getSongLyric = (id)=>{
 	return axios.get('/lyric?id=' + id)
 }
+
+// 歌单收藏着
+export const getPlaylistSubscribers = (id,limit=10)=>{
+	return axios.get('/playlist/subscribers',{
+		params:{
+			limit,
+			id
+		}
+	});
+}
+
+export const getSimiliarPlaylist = (id)=>{
+	return axios.get('/simi/playlist',{
+		params:{
+			id
+		}
+	});
+}

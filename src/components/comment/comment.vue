@@ -65,9 +65,6 @@
 		props:['type','id'],
 		created(){
 			this.initData();
-		},
-		beforeUpdate(){
-			this.initData();
 		}
 	}
 </script>

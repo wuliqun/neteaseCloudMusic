@@ -1,8 +1,6 @@
 <template>
     <div class="app-dld">
-        <div class="title">
-            网易云音乐多端下载
-        </div>
+        <small-section-title title="网易云音乐多端下载"></small-section-title>
         <div class="dld-list">
             <div class="ios icon"></div>
             <div class="win icon"></div>
@@ -12,18 +10,15 @@
     </div>
 </template>
 <script>
+    import {SmallSectionTitle} from '@components/unit'
     export default {
-        
+        components:{
+            SmallSectionTitle
+        }
     }
 </script>
 <style lang="scss" scoped>
     .app-dld{
-        .title{
-            line-height: 30px;
-            font-size: 12px;
-            color:#333;
-            border-bottom: 1px solid #ccc;
-        }
         .dld-list{
             display: flex;
             justify-content: space-between;
