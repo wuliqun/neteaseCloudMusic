@@ -69,11 +69,15 @@
 		},
 		filters:{
 			count2str(count){
-				if(count >= 100000){
-					return Math.round(count/10000) + '万';
-				}else{
-					return count + '';
-				}
+				if(n < 10000){
+                    return '' + n;
+                }else{
+                    var s =  (n/10000).toFixed(1) + '万';
+                    if(s.length >=6){
+                        s = s.split('.')[0] + '万'
+                    }
+                    return s;
+                }
 			}
 		},
 		created(){

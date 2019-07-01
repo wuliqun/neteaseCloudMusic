@@ -160,3 +160,14 @@ export const getSimiliarPlaylist = (id)=>{
 		}
 	});
 }
+
+// 获取歌手专辑
+export const getAlbumsByArtistId = (id,limit=30,offset=0) =>{
+	return axios.get('/artist/album',{
+		params:{
+			id,
+			limit,
+			offset
+		}
+	});
+}

@@ -162,7 +162,7 @@
         bottom:0;
         left:50%;
         width:14px;
-        height:7px;
+        height:6px;
         background:url(../../assets/topbar.png) no-repeat -215px -140px;
         transform:translateX(-50%);
     }

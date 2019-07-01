@@ -122,7 +122,7 @@
 						}else if(nowDay - day == 1){//昨天逻辑
 							return '昨天' + hour + ':' + min;
 						}
-					}else if(nowMon - mon == 1 && nowDay == 1 && now.setDate(0).getDate() == day){//今天是1号，昨天逻辑
+					}else if(nowMon - mon == 1 && nowDay == 1 && now.setDate(0) && now.getDate() == day){//今天是1号，昨天逻辑
 						return '昨天' + hour + ':' + min;
 					}else{
 						return mon + '月' + day + '日 ' + hour + ':' + min;

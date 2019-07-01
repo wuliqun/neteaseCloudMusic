@@ -42,10 +42,14 @@
         mixins:[searchMixin],
         filters:{
             count2str(num){
-                if(num < 10000){
-                    return '' + num;
+                if(n < 10000){
+                    return '' + n;
                 }else{
-                    return (num/10000).toFixed(2) + '万';
+                    var s =  (n/10000).toFixed(1) + '万';
+                    if(s.length >=6){
+                        s = s.split('.')[0] + '万'
+                    }
+                    return s;
                 }
             },
             duration2str(duration){

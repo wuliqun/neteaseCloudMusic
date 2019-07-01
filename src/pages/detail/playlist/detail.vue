@@ -36,65 +36,65 @@
 </template>
 
 <script>
-import { 
-    getPlaylistDetail,
-    getSimiliarPlaylist
-} from '@service/getData'
-import PlaylistHeader from './components/playlistHeader'
-import PlaylistContent from '@components/playlistDetail/playlistContent'
-import AppDownload from '@components/appDownload'
-import Comment from '@components/comment'
-import LikeThis from './components/likeThis'
-import SimiliarPlaylist from './components/similiarPlaylist'
-export default {
-    data(){
-        return {
-            playlist:null,
-            id:null,
-            subscribers:null,
-            similiarPlaylists:null
-        }
-    },
-    methods:{
-        initData(){
-            var id = this.id;
-            getPlaylistDetail(id).then(res=>{
-                this.playlist = res.data.playlist;
-                this.subscribers = res.data.playlist.subscribers;
-            });
-            getSimiliarPlaylist(id).then(res=>{
-                this.similiarPlaylist = res.data.playlists;
-            })
-        }
-    },
-    watch:{
-        '$route.query.id'(id){
-            if(id !== this.id){
+    import { 
+        getPlaylistDetail,
+        getSimiliarPlaylist
+    } from '@service/getData'
+    import PlaylistHeader from './components/playlistHeader'
+    import PlaylistContent from '@components/playlistDetail/playlistContent'
+    import AppDownload from '@components/appDownload'
+    import Comment from '@components/comment'
+    import LikeThis from './components/likeThis'
+    import SimiliarPlaylist from './components/similiarPlaylist'
+    export default {
+        data(){
+            return {
+                playlist:null,
+                id:null,
+                subscribers:null,
+                similiarPlaylists:null
+            }
+        },
+        methods:{
+            initData(){
+                var id = this.id;
+                getPlaylistDetail(id).then(res=>{
+                    this.playlist = res.data.playlist;
+                    this.subscribers = res.data.playlist.subscribers;
+                });
+                getSimiliarPlaylist(id).then(res=>{
+                    this.similiarPlaylist = res.data.playlists;
+                })
+            }
+        },
+        watch:{
+            '$route.query.id'(id){
+                if(id !== this.id){
+                    this.id = id;
+                    this.initData();
+                }
+            }
+        },
+        created(){
+            var id = this.$route.query.id;
+            if(!id){
+                this.$router.redirectTo({
+                    name:'index'
+                })
+            }else{
                 this.id = id;
                 this.initData();
             }
+        },
+        components:{
+            PlaylistHeader,
+            PlaylistContent,
+            AppDownload,
+            Comment,
+            LikeThis,
+            SimiliarPlaylist
         }
-    },
-    created(){
-        var id = this.$route.query.id;
-        if(!id){
-            this.$router.redirectTo({
-                name:'index'
-            })
-        }else{
-            this.id = id;
-            this.initData();
-        }
-    },
-    components:{
-        PlaylistHeader,
-        PlaylistContent,
-        AppDownload,
-        Comment,
-        LikeThis,
-        SimiliarPlaylist
     }
-}
 </script>
 <style lang="scss" scoped>
     .playlist-detail{
