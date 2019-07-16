@@ -105,8 +105,6 @@
 </script>
 
 <style scoped>
-	#top-list{
-	}
 	#top-list .top-list{
 		margin-top:20px;
 		border:1px solid #d3d3d3;
@@ -140,9 +138,6 @@
 		float:right;
 		width:100px;
 		margin:8px 0 0 10px;
-	}
-	#top-list .title-txt{
-		margin:
 	}
 	#top-list .title-txt a{
 		font-weight:bold;

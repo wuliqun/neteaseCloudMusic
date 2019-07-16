@@ -257,9 +257,8 @@
                 }                
             }
             .delta{
-                float: left;
+                float:left;
                 margin-left: 2px;
-                display: inline-block;
                 width:11px;
                 height: 8px;
                 margin-top: 7px;

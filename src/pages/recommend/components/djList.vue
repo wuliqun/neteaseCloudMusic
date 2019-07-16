@@ -29,7 +29,7 @@
 		methods:{
 			initData(){
 				getPaygift().then(response=>{
-					this.list = response.data.data.list;
+					this.list = response.data.data.list.slice(0,10);
 				});
 			}
 		},

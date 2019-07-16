@@ -134,7 +134,7 @@
             margin-top:40px;
         }
         .desc{
-            margin-top: 15px;
+            margin-top:15px;
             .label{
                 line-height: 25px;
                 color:#333;

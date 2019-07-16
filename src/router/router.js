@@ -39,6 +39,7 @@ const Video = () => import('@pages/detail/video')
 
 export default {
     mode : 'hash',
+    base:'/neteaseCloudMusic',
     routes: [
     	{
             path:'/',

@@ -91,7 +91,7 @@
             }
             .song-header-wrapper{
                 float: left;
-                margin-top: 8px;
+                margin-top:8px;
             }
         }
         .comment-wrapper{

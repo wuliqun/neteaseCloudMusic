@@ -41,7 +41,7 @@
     export default {
         mixins:[searchMixin],
         filters:{
-            count2str(num){
+            count2str(n){
                 if(n < 10000){
                     return '' + n;
                 }else{
