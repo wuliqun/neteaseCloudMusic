@@ -1,4 +1,4 @@
-const baseUrl = 'http://www.liqun91.top:8888';
+const baseUrl = 'https://api.mu3c.xyz';
 const requestConfig = {
 	xhrFields:{
 		withCredentials:true
