@@ -26,7 +26,7 @@
 </template>
 
 <script>
-	import {getSignedArtist} from '@service/getData'
+	import {getSignedArtist} from 'API/getData'
 	import Loading from '@components/loading'
 	export default {
 		data(){
@@ -123,7 +123,7 @@
 			float:right;
 			width:16px;
 			height:17px;
-			background:url(../../../../assets/icon.png) no-repeat 0 -740px;
+			background:url(../../../../img/icon.png) no-repeat 0 -740px;
 		}
 	}
 </style>

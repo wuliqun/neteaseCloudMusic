@@ -19,7 +19,7 @@
 </template>
 
 <script>
-	import {getDjCatlist} from '@service/getData'
+	import {getDjCatlist} from 'API/getData'
 	export default{
 		data(){
 			return {
@@ -113,7 +113,7 @@
 			width:12px;
 			height:30px;
 			opacity:.35;
-			background:url(../../../assets/radio_slide.png) no-repeat 0 0;
+			background:url(../../../img/radio_slide.png) no-repeat 0 0;
 			&:hover{
 				opacity:.55;
 			}
@@ -138,7 +138,7 @@
 				width:6px;
 				height:6px;
 				margin:0 12px;
-				background:url(../../../assets/radio_slide.png) no-repeat -7px -7px;
+				background:url(../../../img/radio_slide.png) no-repeat -7px -7px;
 				&:hover{
 					cursor:pointer;
 					background-position:-37px -7px;

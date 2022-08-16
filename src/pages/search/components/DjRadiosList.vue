@@ -95,14 +95,14 @@
                     height:12px;
                     width:12px;
                     margin: 5px 5px 0 0;
-                    background: url(../../../assets/icon2.png) no-repeat -110px -190px;
+                    background: url(../../../img/icon2.png) no-repeat -110px -190px;
                 }
                 .gender-icon{
                     float: left;
                     width:14px;
                     height:14px;
                     margin-top: 4px;
-                    background: url(../../../assets/icon.png) no-repeat -70px -20px;
+                    background: url(../../../img/icon.png) no-repeat -70px -20px;
                     &.female{
                         background-position-y:0;
                     }

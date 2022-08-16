@@ -36,7 +36,7 @@
 </template>
 
 <script>
-	import {getPlaylstCatlist} from '@service/getData'
+	import {getPlaylstCatlist} from 'API/getData'
 	export default{
 		data(){
 			return {
@@ -102,7 +102,7 @@
 			height:31px;			
 			padding:0 14px;
 			color:#0c73c2;
-			background:url(../../../assets/button2.png) no-repeat 0 -141px;
+			background:url(../../../img/button2.png) no-repeat 0 -141px;
 			&:after{
 				content:'';
 				position:absolute;
@@ -110,7 +110,7 @@
 				right:0;
 				width:5px;
 				height:100%;
-				background:url(../../../assets/button2.png) no-repeat -245px -182px;
+				background:url(../../../img/button2.png) no-repeat -245px -182px;
 			}
 			&:hover{
 				background-position:0 -223px;
@@ -123,7 +123,7 @@
 				width:8px;
 				height:5px;
 				vertical-align:middle;
-				background:url(../../../assets/icon.png) no-repeat -70px -543px;
+				background:url(../../../img/icon.png) no-repeat -70px -543px;
 			}
 		}
 		.cate-pop{
@@ -140,7 +140,7 @@
 				left:120px;
 				width:24px;
 				height:11px;
-				background:url(../../../assets/iconall.png) no-repeat -48px 0;
+				background:url(../../../img/iconall.png) no-repeat -48px 0;
 			}
 			.top{
 				padding:19px 25px 11px;
@@ -171,7 +171,7 @@
 					width:24px;
 					height:24px;
 					margin-left:25px;
-					background:url(../../../assets/icon.png) no-repeat 0 0;
+					background:url(../../../img/icon.png) no-repeat 0 0;
 				}
 				.icon-0{
 					background-position:-20px -735px;

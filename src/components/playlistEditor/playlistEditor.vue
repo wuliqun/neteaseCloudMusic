@@ -153,7 +153,7 @@
 		width:14px;
 		height:14px;
 		margin:2px 3px 0 0;
-		background:url(../../assets/icon-1.png) no-repeat -50px -270px;
+		background:url(../../img/icon-1.png) no-repeat -50px -270px;
 	}
 	#playlist-editer .btn{
 		margin-left:62px;

@@ -111,7 +111,7 @@
 			width:69px;
 			height:24px;
 			text-align:center;
-			background:url(../../assets/button.png) no-repeat 0 0;
+			background:url(../../img/button.png) no-repeat 0 0;
 			a{
 				line-height:24px;
 				padding:0;

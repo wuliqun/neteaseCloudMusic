@@ -103,7 +103,7 @@
 			width:13px;
 			height:13px;
 			margin-top:3px;
-			background:url(../../../assets/icon.png) no-repeat -70px -140px;
+			background:url(../../../img/icon.png) no-repeat -70px -140px;
 		}
 		.ut{
 			margin-left:4px;
@@ -122,7 +122,7 @@
 				margin-right:5px;
 				line-height:31px;
 				text-align:center;
-				background:url(../../../assets/button2.png) no-repeat 0 0;
+				background:url(../../../img/button2.png) no-repeat 0 0;
 			}
 			.icon-1{
 				position:relative;
@@ -136,10 +136,10 @@
 				height:100%;
 				right:0;
 				top:0;
-				background:url(../../../assets/button2.png) no-repeat -245px -1020px;
+				background:url(../../../img/button2.png) no-repeat -245px -1020px;
 			}
 			.icon-1:hover:after{
-				background:url(../../../assets/button2.png) no-repeat -245px -1106px;
+				background:url(../../../img/button2.png) no-repeat -245px -1106px;
 			}
 			.play{
 				width:62px;

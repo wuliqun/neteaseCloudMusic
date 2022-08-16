@@ -77,7 +77,7 @@
 			@include wh(14px,14px);
 			margin-top:12px;
 			cursor:pointer;
-			background:url(../../assets/icon.png) -73px -363px;
+			background:url(../../img/icon.png) -73px -363px;
 		}
 	}
 </style>

@@ -39,7 +39,7 @@
 		width:857px;
 		height:430px;
 		margin:0 20px;
-		background:url(../../assets/friend.jpg) no-repeat 0 0;
+		background:url(../../img/friend.jpg) no-repeat 0 0;
 	}
 	#friend .nologin .desc{
 		width:280px;
@@ -55,6 +55,6 @@
 		height:49px;
 	}
 	#friend .nologin .login-btn:hover{
-		background:url(../../assets/friend.jpg) no-repeat 0 -430px;
+		background:url(../../img/friend.jpg) no-repeat 0 -430px;
 	}
 </style>

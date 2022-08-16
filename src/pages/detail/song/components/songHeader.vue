@@ -62,7 +62,7 @@
         }from '@components/buttons'
     import DetailTag from '@components/detailTag'
     import TxtPanel from '@components/playlistDetail/txtPanel'
-    import {getSongLyric} from '@service/getData'
+    import {getSongLyric} from 'API/getData'
     import {mapMutations} from 'vuex'
     import lyric from './lyric'
     export default {

@@ -147,7 +147,7 @@
         }
         .icon{
             float: left;
-            background:url(../../../assets/table.png) no-repeat 0 0;
+            background:url(../../../img/table.png) no-repeat 0 0;
         }
         .mv-icon{
             display:inline-block;
@@ -155,9 +155,9 @@
             height:17px;
             margin-left:2px;
             vertical-align:middle;
-            background:url(../../../assets/table.png) no-repeat 0 -151px;
+            background:url(../../../img/table.png) no-repeat 0 -151px;
             &:hover{
-                background:url(../../../assets/table.png) no-repeat -30px -151px;
+                background:url(../../../img/table.png) no-repeat -30px -151px;
             }
         }
         .play{
@@ -197,7 +197,7 @@
         .add{
             width:13px;
             margin-left:8px;
-            background:url(../../../assets/icon.png) no-repeat 0 -700px;
+            background:url(../../../img/icon.png) no-repeat 0 -700px;
             &:hover{
                 background-position:-22px -700px;
             }
@@ -262,7 +262,7 @@
                 width:11px;
                 height: 8px;
                 margin-top: 7px;
-                background:url(../../../assets/icon.png) no-repeat -65px -520px;
+                background:url(../../../img/icon.png) no-repeat -65px -520px;
                 &.delta-up{
                     background-position: -45px -520px;
                 }

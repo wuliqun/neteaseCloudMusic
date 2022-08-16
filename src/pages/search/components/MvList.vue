@@ -95,7 +95,7 @@
                 width:90px;
                 color:#fff;
                 line-height: 20px;
-                background:url(../../../assets/play-count-mask.png) no-repeat 0 0;
+                background:url(../../../img/play-count-mask.png) no-repeat 0 0;
             }
             .play-count{
                 float: right;
@@ -106,7 +106,7 @@
                 width:16px;
                 height:10px;
                 margin:6px 4px 0 0;
-                background:url(../../../assets/icon2.png) no-repeat -60px -310px;
+                background:url(../../../img/icon2.png) no-repeat -60px -310px;
             }
             .duration{
                 position: absolute;
@@ -128,7 +128,7 @@
                 height:16px;
                 margin-top: -3px;
                 vertical-align: middle;
-                background:url(../../../assets/icon2.png) no-repeat -270px -480px;
+                background:url(../../../img/icon2.png) no-repeat -270px -480px;
             }
             a:hover{
                 text-decoration: underline;

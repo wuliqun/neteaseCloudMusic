@@ -133,7 +133,7 @@
         .icon{
             float: left;
             text-indent: -9999px;
-            background:url(../../../assets/table.png) no-repeat 0 0;
+            background:url(../../../img/table.png) no-repeat 0 0;
         }
         .play{
             width:17px;
@@ -150,7 +150,7 @@
         .add{
             width:13px;
             height:14px;
-            background:url(../../../assets/icon.png) no-repeat 0 -700px;
+            background:url(../../../img/icon.png) no-repeat 0 -700px;
             &:hover{
                 background-position:-22px -700px;
             }

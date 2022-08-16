@@ -25,7 +25,7 @@
     </div>
 </template>
 <script>
-    import {getSongDetailInfo} from '@service/getData'
+    import {getSongDetailInfo} from 'API/getData'
     import SongHeader from './components/songHeader'
     import Comment from '@components/comment'
     import AppDownload from '@components/appDownload'
@@ -82,7 +82,7 @@
                 margin-right: 24px;
                 padding:38px;
                 box-sizing: border-box;
-                background:url(../../../assets/coverall.png) no-repeat -140px -580px;
+                background:url(../../../img/coverall.png) no-repeat -140px -580px;
                 img{
                     width:100%;
                     height:100%;

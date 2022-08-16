@@ -86,7 +86,7 @@
 		top:8px;
 		width:7px;
 		height:13px;
-		background:url(../../assets/icon.png) no-repeat -45px -540px;
+		background:url(../../img/icon.png) no-repeat -45px -540px;
 	}
 	#comment-editer .btn{
 		margin-top:10px;

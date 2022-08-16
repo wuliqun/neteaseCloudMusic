@@ -39,7 +39,7 @@
     import { 
         getPlaylistDetail,
         getSimiliarPlaylist
-    } from '@service/getData'
+    } from 'API/getData'
     import PlaylistHeader from './components/playlistHeader'
     import PlaylistContent from '@components/playlistDetail/playlistContent'
     import AppDownload from '@components/appDownload'

@@ -215,7 +215,7 @@
 		width:12px;
 		height:12px;
 		margin-top:2px;
-		background:url(../../assets/icon.png) no-repeat -37px -680px;
+		background:url(../../img/icon.png) no-repeat -37px -680px;
 	}
 	#comment-list .reply-comment{
 		position:relative;
@@ -231,6 +231,6 @@
 		left:18px;
 		width:8px;
 		height:4px;
-		background:url(../../assets/icon.png) no-repeat 0 -556px;
+		background:url(../../img/icon.png) no-repeat 0 -556px;
 	}
 </style>

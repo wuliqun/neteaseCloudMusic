@@ -93,7 +93,7 @@
 			width:50px;
 			height:45px;
 			margin:0 5px;
-			background:url(../../assets/foot_enter_new.png) no-repeat 0 0;
+			background:url(../../img/foot_enter_new.png) no-repeat 0 0;
 			background-size:110px 450px;
 		}
 		.unit .txt{
@@ -101,7 +101,7 @@
 			width:52px;
 			height:14px;
 			margin:5px 5px 0;
-			background:url(../../assets/foot_enter_tt.png) no-repeat 0 0;
+			background:url(../../img/foot_enter_tt.png) no-repeat 0 0;
 			background-size:180px 100px;
 		}
 		.unit .logo-user{

@@ -80,7 +80,7 @@
 			float:left;
 			@include wh(35px,35px);
 			margin:10px 0 0 35px;
-			background:url(../../assets/icon-1.png) no-repeat 0 -495px;
+			background:url(../../img/icon-1.png) no-repeat 0 -495px;
 		}
 		.list{
 			overflow:auto;

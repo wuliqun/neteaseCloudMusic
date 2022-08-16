@@ -17,7 +17,7 @@
     .tag{
         width:54px;
         height:24px;
-        background:url(../../assets/icon-1.png) no-repeat 0 0;
+        background:url(../../img/icon-1.png) no-repeat 0 0;
         &.song{            
             background-position: 0 -463px;
         }

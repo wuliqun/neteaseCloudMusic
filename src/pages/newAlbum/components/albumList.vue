@@ -117,7 +117,7 @@
 				bottom:5px;
 				width:28px;
 				height:28px;
-				background:url(../../../assets/iconall.png) no-repeat 0 -140px;
+				background:url(../../../img/iconall.png) no-repeat 0 -140px;
 				&:hover{
 					background-position:0 -170px;
 				}
@@ -131,7 +131,7 @@
 			height:130px;
 			width:153px;
 			text-align:left;
-			background:url(../../../assets/coverall.png) no-repeat 0 -845px;
+			background:url(../../../img/coverall.png) no-repeat 0 -845px;
 			img{
 				width:128px;
 				height:128px;

@@ -46,7 +46,7 @@
 </template>
 
 <script>
-    import { getToplistDetail } from '@service/getData'
+    import { getToplistDetail } from 'API/getData'
 	import SectionTitle from '@components/sectionTitle'
 	import {mapMutations,mapState} from 'vuex'
 	export default{
@@ -151,7 +151,7 @@
 		width:22px;
 		height:22px;
 		margin-right:10px;
-		background:url(../../../assets/index.png) no-repeat 0 0;
+		background:url(../../../img/index.png) no-repeat 0 0;
 	}	
 	#top-list .right .play{
 		background-position:-267px -205px;
@@ -226,7 +226,7 @@
 		float:left;
 		height:17px;
 		margin:7px 10px 0 0;
-		background:url(../../../assets/index.png) no-repeat 0 0;
+		background:url(../../../img/index.png) no-repeat 0 0;
 	}
 	#top-list .song .operate .play{
 		width:17px;

@@ -9,7 +9,7 @@
 </template>
 
 <script>
-	import {getComment} from '@service/getData'
+	import {getComment} from 'API/getData'
 	import CommentEditor from './commentEditor'
 	import CommentList from './commentList'
 	import Pagination from '@components/pagination'

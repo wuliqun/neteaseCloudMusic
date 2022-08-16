@@ -86,7 +86,7 @@
 				width:14px;
 				height:14px;
 				margin-top:2px;
-				background:url(../../../../assets/icon.png) no-repeat -50px -300px;
+				background:url(../../../../img/icon.png) no-repeat -50px -300px;
 			}
 		}
 		.desc{

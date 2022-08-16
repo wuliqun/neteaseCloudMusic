@@ -1,12 +1,12 @@
 import {
     getStore,
     setStore
-} from '@service/storageApi'
+} from 'API/storageApi'
 import {
     getPlaylistDetail,
     getAlbumDetail,
     getSongDetailInfo
-} from '@service/getData'
+} from 'API/getData'
 
 const state = {
     playlist:null,

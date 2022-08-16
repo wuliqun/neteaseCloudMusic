@@ -35,6 +35,6 @@ export default {
 		line-height:40px;
 		color:#ccc;
 		font-size:13px;
-		background:url(../assets/playbar.png) no-repeat 0 -287px;
+		background:url(../img/playbar.png) no-repeat 0 -287px;
 	}
 </style>

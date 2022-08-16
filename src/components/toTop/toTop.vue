@@ -57,7 +57,7 @@
 		width:11px;
 		height:8px;
 		margin:7px 0 0 17px;
-		background:url(../../assets/icon.png) no-repeat -45px -520px;
+		background:url(../../img/icon.png) no-repeat -45px -520px;
 	}
 	.to-top span{
 		margin-top:15px;

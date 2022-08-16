@@ -261,7 +261,7 @@
 		line-height:22px;
 		text-align:center;
 		text-indent:12px;
-		background:url(../../../assets/button.png) no-repeat 0 -96px;
+		background:url(../../../img/button.png) no-repeat 0 -96px;
 	}
 	#song-sheet-list .head .new:hover{
 		background-position:-94px -39px;
@@ -311,7 +311,7 @@
 		float:left;
 		width:13px;
 		height:14px;
-		background:url(../../../assets/icon-1.png) no-repeat 0 0;
+		background:url(../../../img/icon-1.png) no-repeat 0 0;
 	}
 	#song-sheet-list .list-item .operate .edit{
 		margin-right:10px;

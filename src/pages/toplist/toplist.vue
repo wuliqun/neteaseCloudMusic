@@ -18,7 +18,7 @@
 <script>
 	import ToplistList from './components/toplistList'
 	import ToplistDetail from './components/ToplistDetail'
-	import {getToplist} from '@service/getData'
+	import {getToplist} from 'API/getData'
 	export default{
 		data(){
 			return {

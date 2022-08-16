@@ -72,7 +72,7 @@
             width:22px;
             height:22px;
             margin-right:10px;
-            background: url(../../assets/loading.png) no-repeat 0 0;
+            background: url(../../img/loading.png) no-repeat 0 0;
         }
         .rotating{
             animation:rotate 1s linear infinite;

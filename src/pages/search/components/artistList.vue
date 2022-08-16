@@ -59,7 +59,7 @@
                 width:16px;
                 height:17px;
                 margin-top:8px;
-                background:url(../../../assets/icon.png) no-repeat 0 -740px;
+                background:url(../../../img/icon.png) no-repeat 0 -740px;
             }
         }
     }

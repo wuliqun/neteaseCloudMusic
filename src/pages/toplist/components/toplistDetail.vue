@@ -9,7 +9,7 @@
 	import ListHeader from './listHeader'
 	import SongList from './songList'
 	import Comment from '@components/comment'
-	import {getPlaylistDetail} from '@service/getData'
+	import {getPlaylistDetail} from 'API/getData'
 	export default{
 		data(){
 			return {

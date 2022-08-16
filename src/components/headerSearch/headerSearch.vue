@@ -43,7 +43,7 @@
 </template>
 
 <script>
-	import {search} from '@service/getData'
+	import {search} from 'API/getData'
 	export default{
 		data(){
 			return{
@@ -173,7 +173,7 @@
 			width:14px;
 			height:14px;
 			margin:0 4px 0 10px;
-			background:url(../../assets/icon.png) no-repeat 0 0;
+			background:url(../../img/icon.png) no-repeat 0 0;
 		}
 		.icon-songs{
 			background-position:-35px -300px;

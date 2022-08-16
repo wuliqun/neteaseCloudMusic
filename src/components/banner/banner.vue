@@ -33,7 +33,7 @@
 
 <script>
 	import DownloadAd from '@components/downloadAd'
-	import {getBannerData,getImageMainColor} from '@service/getData'
+	import {getBannerData,getImageMainColor} from 'API/getData'
 	export default{
 		data(){
 			return {
@@ -168,7 +168,7 @@
 		width:39px;
 		height:64px;
 		top:137px;
-		background:url(../../assets/banner.png) no-repeat 0 0;
+		background:url(../../img/banner.png) no-repeat 0 0;
 	}
 	#banner .l-ctrl{
 		left:-90px;

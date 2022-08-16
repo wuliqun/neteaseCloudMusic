@@ -27,7 +27,7 @@
 
 <script>
 	import {mapState,mapActions} from 'vuex'
-	import {getAlbums} from '@service/getData'
+	import {getAlbums} from 'API/getData'
 	import AlbumList from './components/albumList'
 	import Pagination from '@components/pagination'
 	export default{

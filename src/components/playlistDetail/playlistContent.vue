@@ -161,7 +161,7 @@
 	}
 	#song-list .song-list .icon{
 		float:left;
-		background:url(../../assets/table.png) no-repeat 0 0;
+		background:url(../../img/table.png) no-repeat 0 0;
 	}
 	#song-list .song-list .col a{
 		color:#333;
@@ -172,10 +172,10 @@
 		height:17px;
 		margin-left:2px;
 		vertical-align:middle;
-		background:url(../../assets/table.png) no-repeat 0 -151px;
+		background:url(../../img/table.png) no-repeat 0 -151px;
 	}
 	#song-list .song-list .col .mv-icon:hover{
-		background:url(../../assets/table.png) no-repeat -30px -151px;
+		background:url(../../img/table.png) no-repeat -30px -151px;
 	}
 	#song-list .song-list .col a:hover{
 		text-decoration:underline;
@@ -225,7 +225,7 @@
 	}
 	#song-list .song-list .title{
 		border-bottom:1px solid #d6d6d6;
-		background:url(../../assets/table.png) repeat-x 0 0;
+		background:url(../../img/table.png) repeat-x 0 0;
 	}
 	#song-list .song-list .title .col-2,
 	#song-list .song-list .title .col-4{
@@ -250,7 +250,7 @@
 	#song-list .song-list .operate .add{
 		width:13px;
 		margin-left:8px;
-		background:url(../../assets/icon.png) no-repeat 0 -700px;
+		background:url(../../img/icon.png) no-repeat 0 -700px;
 	}
 	#song-list .song-list .operate .add:hover{
 		background-position:-22px -700px;

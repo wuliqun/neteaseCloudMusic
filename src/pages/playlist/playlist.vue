@@ -12,7 +12,7 @@
 	import Pagination from '@components/pagination'
 	import PlaylistHeader from './components/playlistHeader'
 	import PlaylistContainer from './components/playlistContainer'
-	import {getPlaylst} from '@service/getData'
+	import {getPlaylst} from 'API/getData'
 	export default{
 		data(){
 			return {

@@ -61,7 +61,7 @@
 </template>
 
 <script>
-	import {getDjRecommend,getDjRank} from '@service/getData'
+	import {getDjRecommend,getDjRank} from 'API/getData'
 	export default{
 		data(){
 			return {
@@ -138,7 +138,7 @@
 				width:20px;
 				top:10px;
 				left:10px;
-				background:url(../../../../assets/iconall.png) no-repeat 0 -111px;
+				background:url(../../../../img/iconall.png) no-repeat 0 -111px;
 			}
 		}
 		.info{

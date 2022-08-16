@@ -46,7 +46,7 @@
 </template>
 
 <script>
-	import {getTopArtists,getSingerList} from '@service/getData'
+	import {getTopArtists,getSingerList} from 'API/getData'
 	export default{
 		data(){
 			return {
@@ -170,7 +170,7 @@
 			width:16px;
 			height:17px;
 			margin-top:1px;
-			background:url(../../../../assets/icon.png) no-repeat 0 -740px;
+			background:url(../../../../img/icon.png) no-repeat 0 -740px;
 		}
 		.sml .user{
 			float:left;

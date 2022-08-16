@@ -38,7 +38,7 @@
 </template>
 
 <script>
-    import {getDjRecommend} from '@service/getData'
+    import {getDjRecommend} from 'API/getData'
     import {mapActions} from 'vuex'
     export default {
         data(){
@@ -133,7 +133,7 @@
                 width:22px;
                 height:22px;
                 cursor:pointer;
-                background: url(../../../../assets/iconall.png) no-repeat 0 -110px;
+                background: url(../../../../img/iconall.png) no-repeat 0 -110px;
             }
             .name{
                 float: left;

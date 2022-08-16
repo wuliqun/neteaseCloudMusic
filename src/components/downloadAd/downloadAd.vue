@@ -18,7 +18,7 @@
 		height:336px;
 		padding-top:212px;
 		box-sizing:border-box;
-		background:url(../../assets/download.png) no-repeat -1px 0;
+		background:url(../../img/download.png) no-repeat -1px 0;
 	}
 	#download .download-btn{
 		display:block;
@@ -27,7 +27,7 @@
 		margin-left:18px;
 	}
 	#download .download-btn:hover{
-		background:url(../../assets/download.png) no-repeat 0 -340px;
+		background:url(../../img/download.png) no-repeat 0 -340px;
 	}
 	#download .desc{
 		margin:10px 0 0 15px;

@@ -10,7 +10,7 @@
 <script>
 	import Promote from './promote'
 	import Radio from './radio'
-	import {getDjRecommendByType} from '@service/getData'
+	import {getDjRecommendByType} from 'API/getData'
 	export default{
 		data(){
 			return{

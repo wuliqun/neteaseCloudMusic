@@ -89,7 +89,7 @@
             display:inline-block;
             width:12px;
             height:12px;
-            background:url(../../assets/index.png) no-repeat 0 -240px;
+            background:url(../../img/index.png) no-repeat 0 -240px;
         }
     }
 </style>

@@ -22,7 +22,7 @@
 </template>
 
 <script>
-	import {getSingerList} from '@service/getData'
+	import {getSingerList} from 'API/getData'
 	export default{
 		data(){
 			return {

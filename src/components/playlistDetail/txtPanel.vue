@@ -43,7 +43,7 @@
 		display:inline-block;
 		width:11px;
 		height:8px;
-		background:url(../../assets/icon.png) no-repeat 0 0;
+		background:url(../../img/icon.png) no-repeat 0 0;
 	}
 	.txt-panel .spread i.spread-icon{
 		background-position:-65px -520px;

@@ -98,14 +98,14 @@
 				text-align:center;
 				font-size:13px;
 				margin-right:23px;
-				background:url(../../assets/button2.png) no-repeat 0 0;
+				background:url(../../img/button2.png) no-repeat 0 0;
 				&:after{
 					content:'';
 					position:absolute;
 					@include wh(5px,31px);
 					top:0;
 					right:0;
-					background:url(../../assets/button2.png) no-repeat 0 0;
+					background:url(../../img/button2.png) no-repeat 0 0;
 				}
 			}
 			.create{

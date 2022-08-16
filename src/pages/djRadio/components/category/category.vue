@@ -10,7 +10,7 @@
 	import NewRadio from './newRadio'
     import RadioRank from './radioRank'
     import Pagination from '@components/pagination'
-	import {getDjRecommendByType,getDjRank} from '@service/getData'
+	import {getDjRecommendByType,getDjRank} from 'API/getData'
 	export default{
 		data(){
 			return {

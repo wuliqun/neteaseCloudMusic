@@ -1,7 +1,7 @@
 import {
     getStore,
     setStore
-} from '@service/storageApi'
+} from 'API/storageApi'
 
 const state = {
     isAddDiyListPanelShowing:false,

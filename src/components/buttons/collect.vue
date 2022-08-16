@@ -25,7 +25,7 @@
             line-height:31px;
             padding:0 7px 0 28px;
             color:#333;            
-            background:url(../../assets/button2.png) no-repeat 0 -977px;
+            background:url(../../img/button2.png) no-repeat 0 -977px;
             &:after{
                 content:'';
                 position:absolute;
@@ -33,7 +33,7 @@
                 height:100%;
                 right:0;
                 top:0;
-                background:url(../../assets/button2.png) no-repeat -245px -1020px;
+                background:url(../../img/button2.png) no-repeat -245px -1020px;
             }
             &:hover{
                 background-position:0 -1063px;

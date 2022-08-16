@@ -43,7 +43,7 @@
     import { 
         getAlbumDetail,
         getAlbumsByArtistId
-    } from '@service/getData'
+    } from 'API/getData'
     import AppDownload from '@components/appDownload'
     // import PlaylistContent from '@components/playlistDetail/playlistContent'
     import AlbumHeader from './components/albumHeader'
@@ -118,7 +118,7 @@
                     left:0;
                     right:0;
                     bottom: 0;
-                    background: url(../../../assets/coverall.png) no-repeat 0 -986px;
+                    background: url(../../../img/coverall.png) no-repeat 0 -986px;
                 }
             }
         }

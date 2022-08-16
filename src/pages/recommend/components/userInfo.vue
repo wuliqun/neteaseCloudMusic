@@ -42,7 +42,7 @@
 		width:100px;
 		line-height:30px;
 		color:#fff;
-		background:url(../../../assets/index.png) no-repeat 0 -195px;;
+		background:url(../../../img/index.png) no-repeat 0 -195px;;
 	}
 	#user-info-container .user-login .login-btn:hover{
 		text-decoration:none;

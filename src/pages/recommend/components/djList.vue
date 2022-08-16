@@ -19,7 +19,7 @@
 	</div>
 </template>
 <script>
-	import {getPaygift} from '@service/getData'
+	import {getPaygift} from 'API/getData'
 	export default{
 		data(){
 			return {
@@ -90,7 +90,7 @@
 		margin:4px 0 0 4px;
 		width:12px;
 		height:12px;
-		background:url(../../../assets/icon.png) no-repeat 0 0;
+		background:url(../../../img/icon.png) no-repeat 0 0;
 	}
 	#dj-list-wrapper .dj-list-item .info .name,
 	#dj-list-wrapper .dj-list-item .info .desc{

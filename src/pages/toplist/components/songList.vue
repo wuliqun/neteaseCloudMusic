@@ -178,7 +178,7 @@
 		}
 		.icon{
 			float:left;
-			background:url(../../../assets/table.png) no-repeat 0 0;
+			background:url(../../../img/table.png) no-repeat 0 0;
 		}
 		.col{
 			float:left;
@@ -235,7 +235,7 @@
 				width:23px;
 				height:17px;
 				margin:6px 0 0 3px;
-				background:url(../../../assets/table.png) no-repeat 0 -151px;
+				background:url(../../../img/table.png) no-repeat 0 -151px;
 				&:hover{
 					background-position:-30px -151px;
 				}
@@ -260,7 +260,7 @@
 			.add{
 				width:13px;
 				margin-right:5px;
-				background:url(../../../assets/icon.png) no-repeat 0 -700px;
+				background:url(../../../img/icon.png) no-repeat 0 -700px;
 				&:hover{
 					background-position:-22px -700px;
 				}

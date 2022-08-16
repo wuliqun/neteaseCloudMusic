@@ -168,7 +168,7 @@
 			top:74px;
 			width:8px;
 			height:14px;
-			background:url(../../../assets/index.png) no-repeat 0 0;
+			background:url(../../../img/index.png) no-repeat 0 0;
 			&.lctrl{
 				left:10px;
 				background-position:-265px -77px;
@@ -209,7 +209,7 @@
 				bottom:6px;
 				width:22px;
 				height:22px;
-				background:url(../../../assets/iconall.png) no-repeat 0 -85px;
+				background:url(../../../img/iconall.png) no-repeat 0 -85px;
 				&:hover{
 					background-position:0 -110px;
 				}
@@ -223,7 +223,7 @@
 			height:100px;
 			width:118px;
 			text-align:left;
-			background:url(../../../assets/coverall.png) no-repeat 0 -570px;
+			background:url(../../../img/coverall.png) no-repeat 0 -570px;
 			img{
 				width:100px;
 				height:98px;

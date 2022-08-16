@@ -142,7 +142,7 @@
 		width:54px;
 		height:24px;
 		margin-right:10px;
-		background:url(../../assets/icon-1.png) no-repeat 0 -243px;
+		background:url(../../img/icon-1.png) no-repeat 0 -243px;
 	}
 	#playlist-header .name{
 		margin-bottom:12px;

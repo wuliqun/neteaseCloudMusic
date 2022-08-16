@@ -1,6 +1,6 @@
 import {
 	getNewAlbums,
-} from '@service/getData'
+} from 'API/getData'
 
 const state = {
     newAlbums:null

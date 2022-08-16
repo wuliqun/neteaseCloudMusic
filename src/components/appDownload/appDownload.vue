@@ -29,7 +29,7 @@ export default {
       width: 31px;
       height: 48px;
       cursor: pointer;
-      background: url(../../assets/app-icon.png) no-repeat 0 0;
+      background: url(../../img/app-icon.png) no-repeat 0 0;
     }
 
     .ios {

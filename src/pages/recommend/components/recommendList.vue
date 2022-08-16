@@ -31,7 +31,7 @@
 </template>
 
 <script>
-    import {getHotRecommend,getHotPlaylistCategory} from '@service/getData'
+    import {getHotRecommend,getHotPlaylistCategory} from 'API/getData'
 	import SectionTitle from '@components/sectionTitle'
 	import {mapActions} from 'vuex'
 	export default{
@@ -133,7 +133,7 @@
 		width:14px;
 		height:11px;
 		margin:9px 0 0 10px;
-		background:url(../../../assets/iconall.png) no-repeat 0 -24px;
+		background:url(../../../img/iconall.png) no-repeat 0 -24px;
 	}
 	#recommend-list .bottom .play{
 		float:right;
@@ -143,7 +143,7 @@
 		display:block;
 		width:16px;
 		height:17px;
-		background:url('../../../assets/iconall.png') no-repeat 0 0;
+		background:url('../../../img/iconall.png') no-repeat 0 0;
 	}
 	#recommend-list .bottom .play a:hover{
 		background-position:0 -60px;
@@ -161,7 +161,7 @@
 		float:left;
 		height:17px;
 		margin-right:5px;
-		background:url(../../../assets/icon.png) no-repeat 0 0;
+		background:url(../../../img/icon.png) no-repeat 0 0;
 	}
 	#recommend-list .description .radio{
 		width:35px;

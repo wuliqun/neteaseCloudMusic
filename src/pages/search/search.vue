@@ -58,7 +58,7 @@
         UserList
     } from './components'
     import Loading from '@components/loading'
-    import {searchByType} from '@service/getData'
+    import {searchByType} from 'API/getData'
     import Pagination from '@components/pagination'
     export default {
         data(){
@@ -252,7 +252,7 @@
                 border-left: none;
                 border-radius: 0 5px 5px 0/0 5px 5px 0;
                 cursor:pointer;
-                background:url(../../assets/topbar.png) no-repeat 8px -95px #f8f8f8;
+                background:url(../../img/topbar.png) no-repeat 8px -95px #f8f8f8;
             }
         }
         .info-desc{

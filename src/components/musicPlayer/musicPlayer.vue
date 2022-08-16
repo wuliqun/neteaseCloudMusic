@@ -114,7 +114,7 @@
 
 <script>
 	import {mapState,mapMutations,mapActions} from 'vuex'
-	import {getAudioUrl} from '@service/getData'
+	import {getAudioUrl} from 'API/getData'
 	export default{
 		data(){
 			return {
@@ -327,14 +327,14 @@
 		left:0;
 		width:100%;
 		height:53px;
-		background:url(../../assets/playbar.png) repeat-x 0 0;
+		background:url(../../img/playbar.png) repeat-x 0 0;
 		transition:all .5s;
 	}
 	#player .player-icon{
-		background:url(../../assets/playbar.png) no-repeat 0 0;
+		background:url(../../img/playbar.png) no-repeat 0 0;
 	}
 	#player .playlist-icon{
-		background:url(../../assets/playlist.png) no-repeat 0 0;
+		background:url(../../img/playlist.png) no-repeat 0 0;
 	}
 	#player.locked,#player.mouse-active,#player.list-active{
 		bottom:0;

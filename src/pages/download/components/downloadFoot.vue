@@ -122,7 +122,7 @@
 		color:#fff;
 		text-align:center;
 		text-indent:18px;
-		background:url(../../../assets/dld.png) no-repeat 0 0;
+		background:url(../../../img/dld.png) no-repeat 0 0;
 	}
 	#download-foot .list .dld-btn .win{
 		background-position:0 -62px;

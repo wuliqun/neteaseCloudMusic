@@ -13,7 +13,7 @@
 	import PlaylistHeader from './playlistHeader'
 	import PlaylistContent from './playlistContent'
 	import Comment from '@components/comment'
-	import {getPlaylistDetail} from '@service/getData'
+	import {getPlaylistDetail} from 'API/getData'
 	import {mapState,mapMutations} from 'vuex'
 	export default{
 		data(){
