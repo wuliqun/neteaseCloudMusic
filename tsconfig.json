@@ -14,11 +14,11 @@
     "skipLibCheck": true,
     "typeRoots": ["./types", "./node_modules/@types"],
     "paths": {
-      "*":["./node_modules/@types"],
-      "CONFIG/*":["./src/config/*"],
-      "UTILS/*":["./src/utils/*"],
-      "CMT/*":["./src/components/*"],
-      "API/*":["./src/api/*"]
+      "*":["node_modules/@types"],
+      "CONFIG/*":["src/config/*"],
+      "UTILS/*":["src/utils/*"],
+      "CMT/*":["src/components/*"],
+      "API/*":["src/api/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.vue", "types/**/*.ts", "types/**/*.d.ts"],

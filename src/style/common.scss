@@ -1,0 +1,52 @@
+@import "./reset.css";
+
+
+body {
+  font: 12px/1.5 "Microsoft YaHei", tahoma, arial, 'Hiragino Sans GB', '\5b8b\4f53', sans-serif;
+}
+
+.clearfix:after {
+  content: '\20';
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.f-thide {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+
+/* 详情页wrapper */
+.detail-content {
+  background-color: #f5f5f5;
+
+  .detail-wrapper {
+    width: 982px;
+    margin: 0 auto;
+    padding-bottom: 1px;
+    box-sizing: border-box;
+    border: solid #d3d3d3;
+    border-width: 0 1px;
+    background-color: #fff;
+
+    .detail-left {
+      float: left;
+      width: 710px;
+      box-sizing: border-box;
+      border-right: 1px solid #d3d3d3;
+    }
+
+    .detail-right {
+      float: left;
+      width: 270px;
+    }
+  }
+}
